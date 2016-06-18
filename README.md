@@ -1,5 +1,6 @@
 vue-ace-editor
 ====================
+A packaging of [ace](https://ace.c9.io/)
 
 ## How to use
 
