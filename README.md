@@ -27,3 +27,9 @@ vue-ace-editor
     ```
     <editor :content.sync="html" lang="html" theme="chrome" width="300" height="300" ></editor>
     ```
+    
+    prop `content`  is required
+    
+    prop `lang` and `theme` is same as ace-editor's doc
+    
+    prop `height` and `width` could be one of these:  `200`, `200px`, `50%`
