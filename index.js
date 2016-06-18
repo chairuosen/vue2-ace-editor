@@ -5,7 +5,7 @@ require(['emmet/emmet'],function (data) {
 });
 
 module.exports = {
-    template:"<div :style=\"{height: height ? height+'px' : '100%',width: width ? width+'px' : '100%'}\"></div>",
+    template:"<div :style=\"{height: height ? px(height) : '100%',width: width ? px(width) : '100%'}\"></div>",
     props:{
         content:{
             type:String,
@@ -23,7 +23,14 @@ module.exports = {
             contentBackup:""
         }
     },
-    methods: {},
+    methods: {
+        px:function (n) {
+            if( /^\d*$/.test(n) ){
+                return n+"px";
+            }
+            return n;
+        }
+    },
     components: {},
     watch:{
         content:function (val) {
