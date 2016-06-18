@@ -6,7 +6,7 @@ vue-ace-editor
 1. Install
 
     ```
-    npm install --save-dev vue-ace-editor
+    npm install --save-dev git+https://github.com/chairuosen/vue-ace-editor.git
     ```
     
 2. Require it in `components` of Vue options
