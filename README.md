@@ -22,8 +22,28 @@ A packaging of [ace](https://ace.c9.io/)
         },
     }
     ```
+ 
+3. Require the editor's mode/theme module in father's events `vue-ace-editor:init`
+
+    Because if require the modules inside the component dynamically. The size of bundle.js will be very huge.
     
-3. Use the component in template
+    ```
+    {
+        data,
+        methods,
+        components,
+        events:{
+            'vue-ace-editor:init':function () {
+                require('vue-ace-editor/node_modules/brace/mode/html');
+                require('vue-ace-editor/node_modules/brace/mode/javascript');
+                require('vue-ace-editor/node_modules/brace/mode/less');
+                require('vue-ace-editor/node_modules/brace/theme/chrome');
+            }
+        },
+    }
+    ```
+    
+4. Use the component in template
 
     ```
     <editor :content.sync="html" lang="html" theme="chrome" width="300" height="300" ></editor>

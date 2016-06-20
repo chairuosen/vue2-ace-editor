@@ -4,6 +4,8 @@ require(['emmet/emmet'],function (data) {
     window.emmet = data.emmet;
 });
 
+var init = false;
+
 module.exports = {
     template:"<div :style=\"{height: height ? px(height) : '100%',width: width ? px(width) : '100%'}\"></div>",
     props:{
@@ -42,8 +44,11 @@ module.exports = {
         var vm = this;
         var lang = this.lang||'text';
         var theme = this.theme||'chrome';
-        require('brace/mode/'+lang);
-        require('brace/theme/'+theme);
+        if(!init){
+            vm.$dispatch('vue-ace-editor:init');
+            init = true;
+        }
+
         require('brace/ext/emmet');
 
         var editor = vm.editor = ace.edit(this.$el);
