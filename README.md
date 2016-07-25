@@ -23,7 +23,7 @@ A packaging of [ace](https://ace.c9.io/)
     }
     ```
  
-3. Require the editor's mode/theme module in father's events `vue-ace-editor:init`
+3. Require the editor's mode/theme module in options's events `vue-ace-editor:init`
 
     Because if require the modules inside the component dynamically. The size of bundle.js will be very huge.
     
