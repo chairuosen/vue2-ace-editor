@@ -54,3 +54,8 @@ A packaging of [ace](https://ace.c9.io/)
     prop `lang` and `theme` is same as [ace-editor's doc](https://github.com/ajaxorg/ace)
     
     prop `height` and `width` could be one of these:  `200`, `200px`, `50%`
+    
+
+## Notic
+
+This is only a webpack version. If you use browserify. Check this [issue](https://github.com/chairuosen/vue-ace-editor/issues/1#issuecomment-235193574)
