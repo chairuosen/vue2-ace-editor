@@ -2,6 +2,8 @@ vue-ace-editor
 ====================
 A packaging of [ace](https://ace.c9.io/)
 
+Demo: https://github.com/chairuosen/vue-ace-editor-demo
+
 ## How to use
 
 1. Install
