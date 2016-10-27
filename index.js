@@ -4,14 +4,11 @@ require(['emmet/emmet'],function (data) {
     window.emmet = data.emmet;
 });
 
-var init = false;
-
 module.exports = {
     template:"<div :style=\"{height: height ? px(height) : '100%',width: width ? px(width) : '100%'}\"></div>",
     props:{
-        content:{
+        value:{
             type:String,
-            twoWay:true,
             required:true
         },
         lang:String,
@@ -33,21 +30,18 @@ module.exports = {
             return n;
         }
     },
-    components: {},
     watch:{
-        content:function (val) {
+        value:function (val) {
             if(this.contentBackup !== val)
                 this.editor.setValue(val,1);
         }
     },
-    ready: function () {
+    mounted: function () {
         var vm = this;
         var lang = this.lang||'text';
         var theme = this.theme||'chrome';
-        if(!init){
-            vm.$dispatch('vue-ace-editor:init');
-            init = true;
-        }
+
+        this.$emit('init');
 
         require('brace/ext/emmet');
 
@@ -58,11 +52,12 @@ module.exports = {
         editor.getSession().setMode('ace/mode/'+lang);
         editor.setTheme('ace/theme/'+theme);
 
-        editor.setValue(this.content,1);
+        editor.setValue(this.value,1);
 
         editor.on('change',function () {
-            vm.content = editor.getValue();
-            vm.contentBackup = vm.content;
+            var content = editor.getValue();
+            vm.$emit('input',content);
+            vm.contentBackup = content;
         });
 
     }

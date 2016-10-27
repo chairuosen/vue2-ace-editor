@@ -1,21 +1,21 @@
 {
-  "name": "vue-ace-editor",
-  "version": "1.0.2",
-  "description": "A Vue's component based on ace/brace",
+  "name": "vue2-ace-editor",
+  "version": "0.0.1",
+  "description": "A Vue2.0's component based on ace/brace",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chairuosen/vue-ace-editor.git"
+    "url": "git+https://github.com/chairuosen/vue2-ace-editor.git"
   },
   "author": "chairuosen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chairuosen/vue-ace-editor/issues"
+    "url": "https://github.com/chairuosen/vue2-ace-editor/issues"
   },
-  "homepage": "https://github.com/chairuosen/vue-ace-editor#readme",
+  "homepage": "https://github.com/chairuosen/vue2-ace-editor#readme",
   "dependencies": {
     "brace": "^0.8.0",
     "emmet": "git+https://github.com/cloud9ide/emmet-core.git"
