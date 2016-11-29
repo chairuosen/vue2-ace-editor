@@ -41,17 +41,16 @@ module.exports = {
         var lang = this.lang||'text';
         var theme = this.theme||'chrome';
 
-        this.$emit('init');
-
         require('brace/ext/emmet');
 
         var editor = vm.editor = ace.edit(this.$el);
+
+        this.$emit('init',editor);
+        
         editor.$blockScrolling = Infinity;
         editor.setOption("enableEmmet", true);
-
         editor.getSession().setMode('ace/mode/'+lang);
         editor.setTheme('ace/theme/'+theme);
-
         editor.setValue(this.value,1);
 
         editor.on('change',function () {
@@ -59,6 +58,7 @@ module.exports = {
             vm.$emit('input',content);
             vm.contentBackup = content;
         });
+
 
     }
 }
