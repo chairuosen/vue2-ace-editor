@@ -1,6 +1,6 @@
 {
   "name": "vue2-ace-editor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Vue2.0's component based on ace/brace",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/chairuosen/vue2-ace-editor#readme",
   "dependencies": {
-    "brace": "^0.8.0",
+    "brace": "^0.11.0",
     "emmet": "git+https://github.com/cloud9ide/emmet-core.git#41973fcc70392864c7a469cf5dcd875b88b93d4a"
   }
 }
