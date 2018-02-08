@@ -20,7 +20,7 @@ Demo here: https://github.com/chairuosen/vue-ace-editor-demo/tree/vue2
         methods,
         ...
         components: {
-            editor:require('vue2-ace-editor'),
+            editor: require('vue2-ace-editor'),
         },
     }
     ```
@@ -30,12 +30,12 @@ Demo here: https://github.com/chairuosen/vue-ace-editor-demo/tree/vue2
     ```
     {
         data,
-        methods:{
-            editorInit:function () {
-                require('vue-ace-editor/node_modules/brace/mode/html');
-                require('vue-ace-editor/node_modules/brace/mode/javascript');
-                require('vue-ace-editor/node_modules/brace/mode/less');
-                require('vue-ace-editor/node_modules/brace/theme/chrome');
+        methods: {
+            editorInit: function () {
+                require('vue-ace-editor/node_modules/brace/mode/html')
+                require('vue-ace-editor/node_modules/brace/mode/javascript')
+                require('vue-ace-editor/node_modules/brace/mode/less')
+                require('vue-ace-editor/node_modules/brace/theme/chrome')
             }
         },
     }
