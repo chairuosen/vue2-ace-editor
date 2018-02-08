@@ -44,7 +44,7 @@ Demo here: https://github.com/chairuosen/vue-ace-editor-demo/tree/vue2
 4. Use the component in template
 
     ```
-    <editor v-model="content" @init="editorInit();" lang="html" theme="chrome" width="500" height="100"></editor>
+    <editor v-model="content" @init="editorInit" lang="html" theme="chrome" width="500" height="100"></editor>
     ```
     
     prop `v-model`  is required
