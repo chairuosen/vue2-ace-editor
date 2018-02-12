@@ -34,6 +34,12 @@ module.exports = {
         value:function (val) {
             if(this.contentBackup !== val)
                 this.editor.setValue(val,1);
+        },
+        theme:function (newTheme) {
+            this.editor.setTheme('ace/theme/'+newTheme);
+        },
+        lang:function (newLang) {
+            this.editor.getSession().setMode('ace/mode/'+newLang);
         }
     },
     mounted: function () {
