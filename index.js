@@ -1,7 +1,5 @@
 var ace = require('brace')
 
-window.emmet = require('emmet/emmet')
-
 module.exports = {
   template: `<div style="position: relative" :style="{ height: height ? px(height) : '100%', width: width ? px(width) : '100%'}"></div>`,
   props: {
@@ -45,14 +43,11 @@ module.exports = {
     var lang = this.lang || 'text'
     var theme = this.theme || 'chrome'
 
-    require('brace/ext/emmet')
-
     this.editor = ace.edit(this.$el)
 
     this.$emit('init', this.editor)
 
     this.editor.$blockScrolling = Infinity
-    this.editor.setOption('enableEmmet', true)
     this.editor.getSession().setMode('ace/mode/' + lang)
     this.editor.setTheme('ace/theme/' + theme)
     this.editor.setValue(this.value, 1)

@@ -1,6 +1,6 @@
 {
   "name": "vue2-ace-editor-electron",
-  "version": "0.0.5",
+  "version": "0.0.2",
   "description": "A Vue2.0's component based on ace/brace for electron",
   "main": "index.js",
   "scripts": {
