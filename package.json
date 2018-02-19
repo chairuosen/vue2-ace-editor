@@ -1,23 +1,22 @@
 {
-  "name": "vue2-ace-editor",
+  "name": "vue2-ace-editor-electron",
   "version": "0.0.5",
-  "description": "A Vue2.0's component based on ace/brace",
+  "description": "A Vue2.0's component based on ace/brace for electron",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chairuosen/vue2-ace-editor.git"
+    "url": "git+https://github.com/lcherone/vue2-ace-editor-electron.git"
   },
-  "author": "chairuosen",
+  "author": "lcherone",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chairuosen/vue2-ace-editor/issues"
+    "url": "https://github.com/lcherone/vue2-ace-editor-electron/issues"
   },
-  "homepage": "https://github.com/chairuosen/vue2-ace-editor#readme",
+  "homepage": "https://github.com/lcherone/vue2-ace-editor-electron#readme",
   "dependencies": {
-    "brace": "^0.11.0",
-    "emmet": "git+https://github.com/cloud9ide/emmet-core.git#41973fcc70392864c7a469cf5dcd875b88b93d4a"
+    "brace": "^0.11.0"
   }
 }
