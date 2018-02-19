@@ -20,7 +20,7 @@ A packaging of [ace](https://ace.c9.io/)
     ```
     {
         components: {
-            editor: require('vue2-ace-editor'),
+            editor: require('vue2-ace-editor-electron'),
         },
     }
     ```
