@@ -1,9 +1,5 @@
 var ace = require('brace');
 
-require(['emmet/emmet'],function (data) {
-    window.emmet = data.emmet;
-});
-
 module.exports = {
     template:"<div :style=\"{height: height ? px(height) : '100%',width: width ? px(width) : '100%'}\"></div>",
     props:{
