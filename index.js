@@ -2,8 +2,8 @@ var ace = require('brace');
 
 module.exports = {
     render: function (h) {
-        let height = this.height ? this.px(this.height) : '100%'
-        let width = this.width ? this.px(this.width) : '100%'
+        var height = this.height ? this.px(this.height) : '100%'
+        var width = this.width ? this.px(this.width) : '100%'
         return h('div',{
             attrs: {
                 style: "height: " + height  + '; width: ' + width,
