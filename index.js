@@ -1,7 +1,15 @@
 var ace = require('brace');
 
 module.exports = {
-    template:"<div :style=\"{height: height ? px(height) : '100%',width: width ? px(width) : '100%'}\"></div>",
+    render: function (h) {
+        let height = this.height ? this.px(this.height) : '100%'
+        let width = this.width ? this.px(this.width) : '100%'
+        return h('div',{
+            attrs: {
+                style: "height: " + height  + '; width: ' + width,
+            }
+        })
+    },
     props:{
         value:{
             type:String,
