@@ -13,7 +13,7 @@ module.exports = {
     props:{
         value:{
             type:String,
-            required:true
+            required:false
         },
         lang:String,
         theme:String,
