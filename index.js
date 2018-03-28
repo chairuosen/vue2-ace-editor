@@ -13,7 +13,7 @@ module.exports = {
     props:{
         value:{
             type:String,
-            required:true
+            required:false
         },
         lang:String,
         theme:String,
@@ -61,7 +61,10 @@ module.exports = {
         editor.setOption("enableEmmet", true);
         editor.getSession().setMode('ace/mode/'+lang);
         editor.setTheme('ace/theme/'+theme);
-        editor.setValue(this.value,1);
+        
+        if(this.value){
+            editor.setValue(this.value,1);
+        }
 
         editor.on('change',function () {
             var content = editor.getValue();
