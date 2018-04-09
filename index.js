@@ -45,6 +45,19 @@ module.exports = {
         },
         lang:function (newLang) {
             this.editor.getSession().setMode('ace/mode/'+newLang);
+        },
+        options:function(newOption){
+            this.editor.setOptions(newOption);
+        },
+        height:function(){
+            this.$nextTick(function(){
+                this.editor.resize()
+            })
+        },
+        width:function(){
+            this.$nextTick(function(){
+                this.editor.resize()
+            })
         }
     },
     mounted: function () {
