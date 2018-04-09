@@ -51,10 +51,12 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
         data,
         methods: {
             editorInit: function () {
-                require('vue-ace-editor/node_modules/brace/mode/html')
-                require('vue-ace-editor/node_modules/brace/mode/javascript')
-                require('vue-ace-editor/node_modules/brace/mode/less')
-                require('vue-ace-editor/node_modules/brace/theme/chrome')
+                require('brace/ext/language_tools') //language extension prerequsite...
+                require('brace/mode/html')                
+                require('brace/mode/javascript')    //language
+                require('brace/mode/less')
+                require('brace/theme/chrome')
+                require('brace/snippet/javascript') //snippet
             }
         },
     }

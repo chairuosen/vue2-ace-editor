@@ -18,7 +18,8 @@ module.exports = {
         lang:String,
         theme:String,
         height:true,
-        width:true
+        width:true,
+        options:Object
     },
     data: function () {
         return {
@@ -68,7 +69,7 @@ module.exports = {
             vm.$emit('input',content);
             vm.contentBackup = content;
         });
-
-
+        if(vm.options)
+            editor.setOptions(vm.options);
     }
 }
