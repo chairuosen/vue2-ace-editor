@@ -33,7 +33,7 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
     
 2. Require it in `components` of Vue options
 
-    ```
+    ```js
     {
         data,
         methods,
@@ -46,7 +46,7 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
  
 3. Require the editor's mode/theme module in custom methods
     
-    ```
+    ```js
     {
         data,
         methods: {
@@ -54,7 +54,7 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
                 require('brace/ext/language_tools') //language extension prerequsite...
                 require('brace/mode/html')                
                 require('brace/mode/javascript')    //language
-                require('brace/mode/less')
+                require('brace/mode/less')
                 require('brace/theme/chrome')
                 require('brace/snippet/javascript') //snippet
             }
