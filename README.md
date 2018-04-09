@@ -33,7 +33,7 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
     
 2. Require it in `components` of Vue options
 
-    ```js
+    ```
     {
         data,
         methods,
@@ -46,7 +46,7 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
  
 3. Require the editor's mode/theme module in custom methods
     
-    ```js
+    ```
     {
         data,
         methods: {
