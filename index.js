@@ -60,6 +60,10 @@ module.exports = {
             })
         }
     },
+    beforeDestroy: function() {
+        this.editor.destroy();
+        this.editor.container.remove();
+    },
     mounted: function () {
         var vm = this;
         var lang = this.lang||'text';
