@@ -56,7 +56,7 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
                 require('brace/mode/javascript')    //language
                 require('brace/mode/less')
                 require('brace/theme/chrome')
-                require('brace/snippet/javascript') //snippet
+                require('brace/snippets/javascript') //snippet
             }
         },
     }
