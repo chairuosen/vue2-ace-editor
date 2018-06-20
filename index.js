@@ -37,8 +37,10 @@ module.exports = {
     },
     watch:{
         value:function (val) {
-            if(this.contentBackup !== val)
+            if(this.contentBackup !== val){
                 this.editor.setValue(val,1);
+                this.contentBackup = val;
+            }
         },
         theme:function (newTheme) {
             this.editor.setTheme('ace/theme/'+newTheme);
@@ -80,6 +82,7 @@ module.exports = {
         editor.getSession().setMode('ace/mode/'+lang);
         editor.setTheme('ace/theme/'+theme);
         editor.setValue(this.value,1);
+        this.contentBackup = this.value;
 
         editor.on('change',function () {
             var content = editor.getValue();
