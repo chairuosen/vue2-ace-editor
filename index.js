@@ -33,6 +33,9 @@ module.exports = {
                 return n+"px";
             }
             return n;
+        },
+        focus:function(){
+            this.editor.focus()
         }
     },
     watch:{
@@ -60,9 +63,6 @@ module.exports = {
             this.$nextTick(function(){
                 this.editor.resize()
             })
-        },
-        focus:function(){
-            this.editor.focus()
         }
     },
     beforeDestroy: function() {
