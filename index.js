@@ -33,6 +33,9 @@ module.exports = {
                 return n+"px";
             }
             return n;
+        },
+        focus:function(){
+            this.editor.focus()
         }
     },
     watch:{
