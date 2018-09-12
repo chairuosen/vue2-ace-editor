@@ -60,6 +60,9 @@ module.exports = {
             this.$nextTick(function(){
                 this.editor.resize()
             })
+        },
+        focus:function(){
+            this.editor.focus()
         }
     },
     beforeDestroy: function() {
