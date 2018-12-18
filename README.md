@@ -80,3 +80,11 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
 
     `let editor = this.$refs.myEditor.editor`
     
+    or
+    
+    ```
+    editorInit: function (editor) {
+    
+    }
+    ```
+    
