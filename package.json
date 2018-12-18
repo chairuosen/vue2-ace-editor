@@ -1,6 +1,6 @@
 {
   "name": "vue2-ace-editor",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A Vue2.0's component based on ace/brace",
   "main": "index.js",
   "scripts": {
