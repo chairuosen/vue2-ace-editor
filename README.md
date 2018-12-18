@@ -74,3 +74,9 @@ require(['emmet/emmet'],function (data) { // this is huge. so require it async i
     
     prop `height` and `width` could be one of these:  `200`, `200px`, `50%`
     
+5. Access the ACE's instance
+
+    `<editor ref='myEditor'>`
+
+    `let editor = this.$refs.myEditor.editor`
+    
