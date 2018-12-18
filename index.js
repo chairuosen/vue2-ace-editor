@@ -78,7 +78,7 @@ module.exports = {
         this.$emit('init',editor);
         
         editor.$blockScrolling = Infinity;
-        editor.setOption("enableEmmet", true);
+        //editor.setOption("enableEmmet", true);
         editor.getSession().setMode('ace/mode/'+lang);
         editor.setTheme('ace/theme/'+theme);
         editor.setValue(this.value,1);
