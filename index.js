@@ -38,7 +38,7 @@ module.exports = {
     watch:{
         value:function (val) {
             if(this.contentBackup !== val){
-                this.editor.setValue(val,1);
+                this.editor.session.setValue(val,1);
                 this.contentBackup = val;
             }
         },
