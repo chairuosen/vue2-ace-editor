@@ -15,7 +15,7 @@ module.exports = {
             type:String,
             required:true
         },
-        lang:String,
+        lang:true,
         theme:String,
         height:true,
         width:true,
@@ -46,7 +46,7 @@ module.exports = {
             this.editor.setTheme('ace/theme/'+newTheme);
         },
         lang:function (newLang) {
-            this.editor.getSession().setMode('ace/mode/'+newLang);
+            this.editor.getSession().setMode(typeof newLang === 'string' ? ( 'ace/mode/' + newLang ) : newLang);
         },
         options:function(newOption){
             this.editor.setOptions(newOption);
@@ -79,7 +79,7 @@ module.exports = {
         
         editor.$blockScrolling = Infinity;
         //editor.setOption("enableEmmet", true);
-        editor.getSession().setMode('ace/mode/'+lang);
+        editor.getSession().setMode(typeof lang === 'string' ? ( 'ace/mode/' + lang ) : lang);
         editor.setTheme('ace/theme/'+theme);
         editor.setValue(this.value,1);
         this.contentBackup = this.value;
