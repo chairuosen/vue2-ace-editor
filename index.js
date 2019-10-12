@@ -11,10 +11,7 @@ module.exports = {
         })
     },
     props:{
-        value:{
-            type:String,
-            required:true
-        },
+        value:String,
         lang:true,
         theme:String,
         height:true,
@@ -74,14 +71,15 @@ module.exports = {
         require('brace/ext/emmet');
 
         var editor = vm.editor = ace.edit(this.$el);
+        editor.$blockScrolling = Infinity;
 
         this.$emit('init',editor);
         
-        editor.$blockScrolling = Infinity;
         //editor.setOption("enableEmmet", true);
         editor.getSession().setMode(typeof lang === 'string' ? ( 'ace/mode/' + lang ) : lang);
         editor.setTheme('ace/theme/'+theme);
-        editor.setValue(this.value,1);
+        if(this.value)
+            editor.setValue(this.value,1);
         this.contentBackup = this.value;
 
         editor.on('change',function () {
